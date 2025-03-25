@@ -49,7 +49,7 @@ variable "ssh_location" {
 
 #rds variables
 variable "database_snapshot_identifier" {
-  default = "arn:aws:rds:eu-west-2:216989101000:snapshot:dev-rds-db-snapshot"
+  default = "arn:aws:rds:eu-west-2:216989101000:snapshot:shopwise-snapshot"
   description = "the database snapshot arn"
   type = string
 }
@@ -82,5 +82,30 @@ variable "ssl_certificate_arn" {
 variable "operator_email" {
   default = "isamotuayokunmi@gmail.com"
   description = "a valid email address"
+  type = string
+}
+
+#autoscaling group variable
+variable "launch_template_name" {
+  default = "dev-launch-template"
+  description = "name of the launch template"
+  type = string
+}
+
+variable "ec2_image_id" {
+  default = "ami-0457f5e303c61ceee"
+  description = "id of the ami"
+  type = string
+}
+
+variable "ec2_instance_type" {
+  default = "t2.micro"
+  description = "ec2 instance type"
+  type = string
+}
+
+variable "ec2_key_pair_name" {
+  default = "anike"
+  description = "name of the ec2 key pair"
   type = string
 }
