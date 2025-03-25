@@ -28,5 +28,6 @@ resource "aws_db_instance" "database_instance" {
   snapshot_identifier     = data.aws_db_snapshot.latest_db_snapshot.id
   db_subnet_group_name    = aws_db_subnet_group.database_subnet_group.name
   multi_az                = var.multi_az_deployment
+  storage_encrypted       = true
   vpc_security_group_ids  = [aws_security_group.database_security_group.id]
 }
