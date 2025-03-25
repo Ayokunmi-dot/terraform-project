@@ -118,7 +118,7 @@ variable "domain_name" {
 }
 
 variable "record_name" {
-  default = "www.adebisianike.com"
+  default = "www"
   description = "sub domain name"
   type = string
 }
